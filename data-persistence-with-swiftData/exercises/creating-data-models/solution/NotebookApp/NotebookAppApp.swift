@@ -8,7 +8,6 @@ import SwiftData
 
 @main
 struct NotebookAppApp: App {
-
       var body: some Scene {
           WindowGroup {
               ContentView()

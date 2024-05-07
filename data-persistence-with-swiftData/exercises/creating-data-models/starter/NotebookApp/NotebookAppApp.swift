@@ -8,19 +8,11 @@ import SwiftUI
 
 @main
 struct NotebookAppApp: App {
-    let modelContainer: ModelContainer
-
-    init() {
-        do {
-            // ModelContainer initialization for Notes model
-        } catch {
-            fatalError("Could not initialize ModelContainer")
-        }
-    }
+    // Initialize the ModelContainer using NotebookContainer
 
     var body: some Scene {
         WindowGroup {
-            // Inject ModelContainer into ContentView using modelContainer
+            // Inject the ModelContainer into ContentView
             ContentView()
         }
     }

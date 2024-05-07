@@ -13,6 +13,7 @@
 		C089CAFF2BE54B350065AB5C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C089CAFE2BE54B350065AB5C /* Preview Assets.xcassets */; };
 		C089CB062BE54DCF0065AB5C /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089CB052BE54DCF0065AB5C /* Note.swift */; };
 		C089CB0A2BE551540065AB5C /* NoteSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089CB092BE551540065AB5C /* NoteSummary.swift */; };
+		D87CACDF2BE9E13A004161B6 /* NotebookContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87CACDE2BE9E13A004161B6 /* NotebookContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		C089CAFE2BE54B350065AB5C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C089CB052BE54DCF0065AB5C /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		C089CB092BE551540065AB5C /* NoteSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteSummary.swift; sourceTree = "<group>"; };
+		D87CACDE2BE9E13A004161B6 /* NotebookContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				C089CAF72BE54B330065AB5C /* NotebookAppApp.swift */,
+				D87CACDE2BE9E13A004161B6 /* NotebookContainer.swift */,
 				C089CAF92BE54B330065AB5C /* ContentView.swift */,
 				C089CB092BE551540065AB5C /* NoteSummary.swift */,
 				C089CB052BE54DCF0065AB5C /* Note.swift */,
@@ -145,6 +148,7 @@
 			files = (
 				C089CB0A2BE551540065AB5C /* NoteSummary.swift in Sources */,
 				C089CAFA2BE54B330065AB5C /* ContentView.swift in Sources */,
+				D87CACDF2BE9E13A004161B6 /* NotebookContainer.swift in Sources */,
 				C089CAF82BE54B330065AB5C /* NotebookAppApp.swift in Sources */,
 				C089CB062BE54DCF0065AB5C /* Note.swift in Sources */,
 			);
