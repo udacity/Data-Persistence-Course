@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 
 @Model
-class Note: Identifiable, Hashable {
+final class Note: Identifiable, Hashable {
       var id = UUID()
       var title: String
       var body: String
