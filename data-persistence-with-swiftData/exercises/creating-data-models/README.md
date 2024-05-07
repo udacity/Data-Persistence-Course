@@ -1,42 +1,45 @@
-### Exercise: Integrating SwiftData Models into NotebookApp
+### Exercise: Creating Data Models with SwiftData
 
 ## Overview
 
-In this exercise, you will integrate SwiftData models into the NotebookApp, replacing mock models and storage classes. This transition will enhance your app's data handling capabilities and prepare you for more advanced data management and app architecture techniques.
+In this exercise, you will transition the Notebook app from using simple in-memory data models to more robust and scalable data models using SwiftData. This integration will enable more efficient data handling and persistence, preparing the app for more complex functionalities.
 
 ## Objectives
-- Convert the `Note` class into a SwiftData model.
-- Replace the mock models and storage classes with SwiftData entities.
-- Configure the SwiftData environment, initialize the `ModelContainer`, and inject it into the `App.swift` file.
-- Setup the `ModelContainer` for use throughout the app.
+- Create SwiftData models for the Notebook app.
+- Replace mock models and storage classes with SwiftData entities.
+- Configure the SwiftData environment, initialize the ModelContainer, and inject it into the `App.swift` file.
+- Set up the ModelContainer for use throughout the app.
 
 ## Instructions
 
-1. **Convert Note to SwiftData Model**:
-   - Navigate to the `starter` folder and open `NotebookApp.xcodeproj`.
-   - Update the `Note` class to be a final class using the `@Model` macro. Ensure it conforms to SwiftData requirements.
+1. **NotebookContainer.swift:**
 
-2. **Initialize and Configure ModelContainer**:
-   - In the `NotebookAppApp.swift`, implement the initialization of the `ModelContainer` to manage `Note` entities. Properly handle initialization errors.
+   - **Tasks:**
+     - Define a `Schema` with `Note.self` indicating the models managed by this schema.
+     - Create a `ModelConfiguration` for any needed configurations.
+     - Initialize and return a `ModelContainer` using the above schema and configuration.
 
-3. **Inject ModelContainer into the Environment**:
-   - Modify the `ContentView` to accept the `ModelContainer` from the environment and utilize it properly within the app.
+2. **NotebookAppApp.swift:**
 
-## Starter
-- You will find the initial setup in the `starter` folder where some parts of the code are omitted for you to fill in.
+   - **Tasks:**
+     - Initialize the `ModelContainer` by calling the `create()` method from `NotebookContainer`.
+     - Use the `.modelContainer()` modifier on the `WindowGroup` to inject the `ModelContainer` into the app.
 
-## Solution
-- After completing the tasks, or if you need to refer to the complete code, visit the `solution` folder.
-- Compare your implementation to the provided solution to understand different approaches or troubleshoot any issues.
+3. **ContentView.swift:**
+
+   - **Tasks:**
+     - Replace the `@State` property for notes with a `@Query` to dynamically fetch notes from the data store.
+     - Create an `@Environment` variable named `context` to reference the `modelContext`.
+     - Modify the `addNote()` function to use the `insert()` method on the `context` to add new entries.
 
 ## Setup
-- Ensure you have the latest version of Xcode installed on your Mac.
+- Ensure you have the latest version of Xcode and the SwiftData framework installed on your Mac.
 - Open the Xcode project from the `starter` folder to begin the exercise.
 
-## Additional Notes
-- This exercise aims to provide a practical understanding of how to structure and manage data within an iOS application using SwiftData.
+## Solution
+- After completing the exercise, or if you need to check your work, you can find the complete code in the `solution` folder.
+- Compare your solution with the completed code to understand different approaches or to debug any issues you encountered.
 
 Feel free to reach out if you encounter any difficulties or have questions regarding the exercises.
 
 Happy coding!
-
