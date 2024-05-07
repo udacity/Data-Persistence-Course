@@ -3,12 +3,12 @@
 //  NotebookApp
 //
 
+import SwiftData
 import SwiftUI
 
 struct ContentView: View {
-    @State private var notes = [
-        Note(title: "Sample Note", body: "This is an example note.")
-    ]
+    @Query private var notes: [Note]
+    @Environment(\.modelContext) var context
     @State private var searchText = ""
 
     var body: some View {
@@ -35,7 +35,7 @@ struct ContentView: View {
     }
 
     private func addNote() {
-        notes.append(Note(title: "New Note", body: "Details..."))
+        context.insert(Note(title: "New Note", body: "Details..."))
     }
 }
 
