@@ -16,9 +16,7 @@ struct NoteSummary: View {
                 .fontWeight(.bold)
             Text(note.body)
                 .lineLimit(2)
-            Text("Priority: \(note.priority.rawValue)")
-                .font(.caption)
-                .foregroundColor(.gray)
+            // Add a Text view to display the Priority value with caption font and gray color
         }
         .padding()
         .background(Color.clear)
@@ -29,3 +27,4 @@ struct NoteSummary: View {
 #Preview {
     NoteSummary(note: .constant(Note(title: "My Note", body: "This is a note I wrote")))
 }
+
